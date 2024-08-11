@@ -9,14 +9,13 @@ fi
 
 echo "Running with sudo privileges..."
 
-# Define colors for output
+
 GREEN="\033[0;32m"
 RED="\033[0;31m"
 CYAN="\033[0;36m"
 YELLOW="\033[1;33m"
-NC="\033[0m" # No Color
+NC="\033[0m"
 
-# Define the project directory as the current working directory
 PROJECT_DIR="$(pwd)"
 LOGS_DIR="$PROJECT_DIR/logs"
 
@@ -24,18 +23,22 @@ echo -e "${CYAN}=============================="
 echo -e "  Vulnerable Lab Setup Script"
 echo -e "==============================${NC}"
 
-# Create logs directory and set permissions
 echo -e "${YELLOW}Creating logs directory with 755 permissions...${NC}"
 mkdir -p "$LOGS_DIR"
 chmod 755 "$LOGS_DIR"
 
-# Locate the php.ini file and modify it
-PHP_INI_PATH=$(php -i | grep "Loaded Configuration File" | awk '{print $5}')
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS-specific path for php.ini
+    PHP_INI_PATH=$(php -i | grep "Loaded Configuration File" | awk '{print $5}')
+else
+    # Linux-specific path for php.ini
+    PHP_INI_PATH=$(php -i | grep "Loaded Configuration File" | awk '{print $5}')
+fi
 
 if [ -f "$PHP_INI_PATH" ]; then
     echo -e "${YELLOW}Modifying php.ini to enable allow_url_include and allow_url_fopen...${NC}"
-    if sed -i 's/allow_url_include = Off/allow_url_include = On/' "$PHP_INI_PATH" && \
-       sed -i 's/allow_url_fopen = Off/allow_url_fopen = On/' "$PHP_INI_PATH"; then
+    if sed -i.bak 's/allow_url_include = Off/allow_url_include = On/' "$PHP_INI_PATH" && \
+       sed -i.bak 's/allow_url_fopen = Off/allow_url_fopen = On/' "$PHP_INI_PATH"; then
         echo -e "${GREEN}php.ini updated successfully to enable allow_url_include and allow_url_fopen.${NC}"
     else
         echo -e "${RED}Failed to update php.ini. Please check the file path and permissions.${NC}"
