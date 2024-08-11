@@ -27,11 +27,13 @@ This will start a local server, and you can access the application by navigating
 
 ### Homepage UI
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/58d0ed42-c0b7-4d97-bffe-a1b47bbe3d34">
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/1d8cc6c3-4cbe-463f-b4b9-81a3e52e1561">
+
 
 ### Easy Bonus Challenge
 
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/678ac352-fbe3-4fed-8217-ba3eea22a3e1">
+<img width="1512" alt="image" src="https://github.com/user-attachments/assets/798130e3-80a3-4e87-a7f6-e57d0c877baf">
+
 
 ## Learning Objectives
 
