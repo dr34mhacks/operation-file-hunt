@@ -21,7 +21,8 @@ cd operation-file-hunt
 ```
 sudo bash runme.sh
 ```
-<img width="1512" alt="image" src="https://github.com/user-attachments/assets/66f0d2cc-d98f-4926-a2da-c8a31b3cd54e">
+<img width="1929" alt="image" src="https://github.com/user-attachments/assets/3e837fa2-5ea9-4048-99e2-a2ea1cc18d9d">
+
 
 This will start a local server, and you can access the application by navigating to `http://localhost:8085` in your web browser.
 
