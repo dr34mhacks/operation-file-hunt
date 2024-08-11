@@ -55,4 +55,4 @@ Feel free to submit issues or pull requests for enhancements or bug fixes. Contr
 
 - [https://dr34mhacks.github.io/posts/lfi-to-rce-walkthrough/](https://dr34mhacks.github.io/posts/lfi-to-rce-walkthrough/)
 
-Happy Hunting! 🛡️🔍
+Happy Hacking! 🛡️🔍
